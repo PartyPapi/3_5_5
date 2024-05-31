@@ -28,7 +28,7 @@ void main() {
   print('Das entspricht einem Fortschritt von ${progress.toStringAsFixed(2)}%');
   print('Verbleibende Tage bis zum Kursende: $remainingDays');
 
-  if (progress = 100) {
+  if (progress >= 100) {
     print('Herzlichen Glückwunsch! Sie haben den Kurs abgeschlossen!');
   } else if (progress >= 75) {
     print(
