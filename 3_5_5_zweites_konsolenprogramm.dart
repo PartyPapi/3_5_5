@@ -18,22 +18,26 @@ int getUserInput() {
 void main() {
   const int totalDays = 270;
 
+  print(
+      'Willkommen zum automatischen Erstellen der Statistikdaten zu unserem Kurs.');
+
   int daysDone = getUserInput();
   double progress = calcProgress(daysDone, totalDays);
   int remainingDays = totalDays - daysDone;
 
-  print('Kursfortschritt: ${progress.toStringAsFixed(2)}%');
+  print('Das entspricht einem Fortschritt von ${progress.toStringAsFixed(2)}%');
   print('Verbleibende Tage bis zum Kursende: $remainingDays');
 
-  if (progress >= 100) {
+  if (progress = 100) {
     print('Herzlichen Glückwunsch! Sie haben den Kurs abgeschlossen!');
   } else if (progress >= 75) {
-    print('Großartig! Sie haben 75% des Kurses abgeschlossen!');
+    print(
+        'Großartig! Sie haben mindestens drei Viertel des Kurses abgeschlossen!');
   } else if (progress >= 50) {
-    print('Super! Sie haben die Hälfte des Kurses abgeschlossen!');
+    print('Sie haben die Hälfte des Kurses abgeschlossen!');
   } else if (progress >= 25) {
-    print('Gut gemacht! Sie haben 25% des Kurses abgeschlossen!');
+    print('Sie haben bereits ein Viertel des Kurses abgeschlossen!');
   } else {
-    print('Sie haben begonnen, weiter so!');
+    print('Sie befinden Sich in der Anfangsphase. Weiter so!');
   }
 }
